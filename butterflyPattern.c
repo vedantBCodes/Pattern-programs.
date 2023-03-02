@@ -35,8 +35,8 @@ int main() //Butterfly_pattern program
     }
 }
 /*
-*              *
-* *          * *
+*                *
+* *           * *
 * * *      * * *
 * * * * * * * *
 * * * * * * * *
