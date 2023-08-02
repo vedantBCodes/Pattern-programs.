@@ -1,12 +1,15 @@
 /*
 
-*
-**
-* *
-*  *
-*   *
-*    *
-*******
+* 
+* * 
+*   * 
+*     * 
+*       * 
+*         * 
+*           * 
+*             * 
+*               * 
+* * * * * * * * * * 
 
 */
 
@@ -22,11 +25,11 @@ void hollowRightAngleTriangle(int rows)
            
             if((j==1 || j==i || i==rows))
             {
-            cout<<"*";
+            cout<<"* ";
             }
             else
             {
-                cout<<" ";
+                cout<<"  ";
             }
         }
         cout<<endl;
@@ -34,6 +37,9 @@ void hollowRightAngleTriangle(int rows)
 }
 int main()
 {
-   hollowRightAngleTriangle(10);
-   return 0;
+  int rows;
+  cout<<"Enter the number of rows:";
+  cin>>rows;
+  hollowRightAngleTriangle(rows);
+  return 0;
 }
