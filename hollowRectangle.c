@@ -21,7 +21,7 @@ int main() //Printing hollow rectangle pattern
 }
 /*Output:-
 * * * * *
-*         *
-*         *
+*       *
+*       *
 * * * * *
 */
