@@ -41,9 +41,9 @@ using namespace std;
 
 int main()
 {
-    int row=9;
-    // cout<<"Enter the number of rows:";
-    // cin>>row;
+    int row;
+    cout<<"Enter the number of rows:";
+    cin>>row;
     hollowInvertedFullPyramid(row);
    return 0;
 }
