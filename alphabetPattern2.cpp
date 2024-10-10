@@ -74,6 +74,29 @@ void example3(int rows)
         cout<<endl;
     }
 }
+void example3_2(int rows)
+{
+    int num=65;
+    for(int i=1;i<=rows;i++)
+    {
+        bool toggle=true;
+        for(int j=1;j<=(2*rows-1);j++)
+        {
+            if(j>=(rows+1)-i && j<=(rows-1)+i && toggle == true)
+            {
+                 cout<<char(num)<<" ";
+                 num++;
+                 toggle=false;
+            }
+            else
+            {
+                 cout<<"  ";
+                 toggle=true;
+            }
+        }
+        cout<<endl;
+    }
+}
 int main() 
 {
 int rows=5;
@@ -83,4 +106,6 @@ cout<<endl<<"Example 2:"<<endl;
 example2(rows);
 cout<<endl<<"Example 3:"<<endl;
 example3(rows);
+cout<<endl<<"Example 3 (another approach):"<<endl;
+example3_2(rows);
 }
