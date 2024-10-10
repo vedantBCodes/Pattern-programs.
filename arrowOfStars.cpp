@@ -62,12 +62,31 @@ void arrowOfStars(int num)
         cout<<endl;
     }
 }
-
+void arrowOfStars2(int num)
+{
+    for(int i=1;i<=num;i++)
+    {
+        for(int j=1;j<=num;j++)
+        {
+            if((j>=i && j<(i*2) && i<=(num/2+1)) || (j>(num-i) && j<=(num-i)*2) && i>(num/2+1))
+            {
+                cout<<"* ";
+            }
+            else
+            {
+                cout<<"  ";
+            }
+        }
+        cout<<"\n";
+    }
+}
 int main()
 {
     int num=11;
     // cout<<"Enter the number of rows : ";
     // cin>>num;
     arrowOfStars(num);
+  cout<<endl;
+  arrowOfStars2(num);
    return 0;
 }
