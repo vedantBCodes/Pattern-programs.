@@ -63,7 +63,39 @@ void diamondOfNumbers(int x)   // Worst approach
     cout<<endl;
    }
 }
- 
+
+void diamondOfNumbers2(int row)  //Best approach
+{
+    int x,y;
+    x=y=(row+1)/2;
+    for(int i=1;i<=row;i++)
+    {
+        int num=1;
+        for(int j=1;j<=row;j++)
+        {
+            if((j>=x && j<=y ))
+            {
+                cout<<num<<" ";
+                num++;
+            }
+            else
+            {
+                cout<<"  ";
+            }
+        }
+        if(i<(row+1)/2)
+        {
+             x--;
+             y++;
+        }
+        else
+        {
+            x++;
+            y--;
+        }
+        cout<<endl;
+    }
+}
 int main()
 {
     int num;
@@ -74,5 +106,7 @@ int main()
         num++;
     }
     diamondOfNumbers(num);
+    cout<<endl;
+    diamondOfNumbers2(num);
    return 0;
 }
