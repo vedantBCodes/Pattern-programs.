@@ -46,6 +46,36 @@ void triangleOfNumbers(int num)
     }
 }
 
+void triangleOfNumbers(int row)   //Better approach
+{
+    int col=row*2-1;
+    int temp=col;
+   
+    for(int i=1;i<=row;i++)
+    {
+        int temp2=i;
+        for(int j=1;j<=col;j++)
+        {
+            if(j>=temp && j<=col && j<col+1-i)
+            {
+                       cout<<temp2;
+                      temp2++;
+             }
+             else if(j>=temp && j<=col && j>=col+1-i)
+            {
+                    cout<<temp2;
+                    temp2--;
+            }
+            else
+            {
+                cout<<" ";
+            }
+        }
+        temp-=2;
+        cout<<endl;
+    }
+}
+
 int main()
 {
     int num;
