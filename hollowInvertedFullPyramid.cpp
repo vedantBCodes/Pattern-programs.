@@ -15,18 +15,7 @@ using namespace std;
     {
         for(int j=1;j<=col;j++)
         {
-            if(i==1)
-            {
-            if(j%2!=0)
-            {
-                cout<<"*";
-            }
-            else
-            {
-                cout<<" ";
-            }
-            }
-            else if(j==i || j==(col+1-i))
+            if((i==1 && j%2==1) || j==i || j==col+1-i)
             {
                 cout<<"*";
             }
