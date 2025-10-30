@@ -39,6 +39,29 @@ void numberPattern(int x)
        cout<<endl;
    }
 }
+
+void numberPattern2(int row)  //Better Approach
+{
+  int num=1;
+  for(int i=row;i>=1;i--)
+  {
+    int temp=i;
+    for(int j=1;j<=row;j++)
+    {
+        if(j<=num)
+        {
+            cout<<temp<<" ";
+            temp++;
+        }
+        else
+        {
+            cout<<row<<" ";
+        }
+    } 
+    num++;
+    cout<<endl;
+  }
+}
  
 int main()
 {
