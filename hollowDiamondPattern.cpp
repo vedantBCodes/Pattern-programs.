@@ -14,35 +14,36 @@
 #include <iostream>
 using namespace std;
 
-void hollowDiamond(int size)
+void hollowDiamond(int row)
 {
-    int x,y,z;
-    x=y=z=((size/2)+1);
-   for(int i=1;i<=size;i++)
-   {
-       for(int j=1;j<=size;j++)
-       {
-           if(j==x || j==y)
-           {
-               cout<<"*";
-           }
-           else
-           {
-               cout<<" ";
-           }
-       }
-       if(i<z)
-       {
-           x--;
-           y++;
-       }
-       else
-       {
-           x++;
-           y--;
-       }
-       cout<<endl;
-   }
+  int half = row / 2 + 1;
+  int left = half;
+  int right = half;
+  for(int i=1;i<=row;i++)
+  {
+    for(int j=1;j<=row;j++)
+    {
+        if(j==left || j==right )
+        {
+            cout<<"* ";
+        }
+        else
+        {
+            cout<<"  ";
+        }
+    }
+    if(i<half)
+    {
+        right++;
+        left--;
+    }
+    else
+    {
+        right--;
+        left++;
+    }
+    cout<<endl;
+  }
 }
 int main() {
     int size=10;
