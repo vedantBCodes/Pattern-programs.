@@ -82,6 +82,37 @@ void hollowHourglassPattern2(int row)  //Best approach
         cout<<endl;
     }
 }
+void hollowHourglassPattern3(int row)  //Another Best Approach
+{
+  int half = row / 2 + 1;
+  int left = 1;
+  int right = row;
+  for(int i=1;i<=row;i++)
+  {
+    for(int j=1;j<=row;j++)
+    {
+        if(j==left || j==right || i==1 || i==row)
+        {
+            cout<<"* ";
+        }
+        else
+        {
+            cout<<"  ";
+        }
+    }
+    if(i<half)
+    {
+        right--;
+        left++;
+    }
+    else
+    {
+        right++;
+        left--;
+    }
+    cout<<endl;
+  }
+}
 int main() {
     int n=10; //Here n is the number of stars in the first horizontal row;
     hollowHourglassPattern(n);
